@@ -25,6 +25,7 @@
       </a>
       <div class="btn px-3 py-2 rounded fs-3" onclick="app.carsController.showCars()">🚗</div>
       <div class="btn px-3 py-2 rounded fs-3" onclick="app.housesController.showHouses()">🏠</div>
+      <div class="btn px-3 py-2 rounded fs-3 text-light" onclick="app.jobsController.showJobs()">Job</div>
     </nav>
   </header>
   <main>
@@ -33,8 +34,8 @@
       <section class="row justify-content-center">
         <div id="form" class="col-12 col-md-8">
           <!-- NOTE label labels the input, for points to the input's id so they are tied, name makes the input grab-able in js -->
-
-          <!-- <form onsubmit="app.carsController.createCar()" class="row bg-white rounded elevation-2 p-4">
+          <!-- 
+          <form onsubmit="app.carsController.createCar()" class="row bg-white rounded elevation-2 p-4">
             <h3>List a Car</h3>
             <div class="mb-2 col-4">
               <label for="make">Make</label>
@@ -70,7 +71,6 @@
             <div class="text-end mt-2">
               <button class="btn" type="button">cancel</button>
               <button class="btn btn-primary" type="submit">submit</button>
-            </div>
           </form> -->
           <!-- NOTE all buttons ⬆️ are type submit by default so if you dont want this button to submit the form, you must change the type -->
 
@@ -80,7 +80,7 @@
       <!-- SECTION car listings -->
       <section id="listings" class="row g-2">
 
-        <!-- car tempalte -->
+        <!-- car template -->
         <!-- <div class="col-6 col-md-4">
           <div class="card elevation-2">
             <img
@@ -95,6 +95,171 @@
           </div>
         </div> -->
         <!--  -->
+
+
+        <!-- SECTION house form -->
+        <section class="row">
+          <div id="house-form" class="col-12 col-md-8">
+
+            <!-- <form onsubmit="" class="row p-4 bg-white rounded elevation-2">
+              <h3>List a House</h3>
+              <div class="mb-2 col-4">
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" class="form-control" required min='1000'>
+              </div>
+
+              <div class="mb-2 col-12">
+                <label for="price">Address</label>
+                <input type="text" name="address" id="address" class="form-control" required minlength='5'>
+              </div>
+
+              <div class="mb-2 col-4">
+                <label for="price">Beds</label>
+                <input type="text" name="beds" id="beds" class="form-control" required min='1' max='20'>
+              </div>
+
+              <div class="mb-2 col-4">
+                <label for="price">Baths</label>
+                <input type="text" name="baths" id="baths" class="form-control required" min='1' max='20'>
+              </div>
+
+              <div class="mb-2 col-4">
+                <label for="price">Year Built</label>
+                <input type="number" name="year" id="year" class="form-control required" min='1900'>
+              </div>
+
+              <div class="mb-2 col-4">
+                <label for="price">Sqft.</label>
+                <input type="number" name="sqft" id="sqft" class="form-control required" placeholder="sqft">
+              </div>
+
+              <div class="mb-2 col-12">
+                <label for="price">Image URL</label>
+                <input type="url" name="img" id="img" class="form-control required">
+              </div>
+              <div class="text-end mt-2">
+                <button class="btn" type="button">cancel</button>
+                <button class="btn btn-primary" type="submit">submit</button>
+            </form>  -->
+          </div>
+        </section>
+
+        <!-- SECTION house card -->
+        <section class="row g-2" id="house-listings">
+
+          <!-- <div class="col-6 col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt="house-img">
+              <div class="p-2 text-center">
+                <h5>The price</h5>
+                <p>4 beds | 2 baths | 1,849 sqft</p>
+                <p>Address</p>
+              </div>
+              <div>
+                <button class="btn btn-outline-warning">Delete Post</button>
+              </div>
+            </div>
+          </div> -->
+
+        </section>
+
+
+        <!-- SECTION job form -->
+        <section class="row justify-content-center">
+          <div id="job-form" class="col-12 col-md-8">
+
+
+            <!-- <form onsubmit="" class="row p-4 bg-white rounded elevation-2">
+              <h3>List a Job Opening</h3>
+              <div class="mb-2 col-4">
+                <label for="job-title">Job Title</label>
+                <input type="text" name="job-title" id="job-title" class="form-control" required>
+              </div>
+
+              <div class="mb-2 col-4">
+                <label for="location">Location</label>
+                <input type="text" name="location" id="location" class="form-control" required min='3'>
+              </div>
+
+              <div class="mb-2 col-4">
+                <label for="salary">Salary</label>
+                <input type="number" name="salary" id="salary" class="form-control" required min='8'>
+              </div>
+
+              <div class="mb-2 col-4">
+                <label for="job-type">Job Type</label>
+                <input type="text" name="job-type" id="job-type" class="form-control" required min='3'
+                  placeholder="Full-or-Part-Time">
+              </div>
+
+              <div class="mb-2 col-4">
+                <label for="requirements">Qualifications and Education Requirements</label>
+                <input type="text" name="requirements" id="requirements" class="form-control" required min='10'>
+              </div>
+
+              <div class="mb-2 col-4">
+                <label for="roles">Roles and Responsibilities</label>
+                <input type="text" name="roles" id="roles" class="form-control" required min='10'>
+              </div>
+
+              <div class="mb-2 col-4">
+                <label for="contact">Contact Information</label>
+                <input type="text" name="contact" id="contact" class="form-control" required min='10'
+                  placeholder="Phone Number">
+                <input type="email" name="contact" id="contact" class="form-control" required min='10'
+                  placeholder="example@email.com">
+              </div>
+              <div class="text-end mt-2">
+                <button class="btn" type="button">Cancel</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form> -->
+
+          </div>
+
+        </section>
+
+
+        <!-- SECTION job card -->
+        <section class="row g-2" id="job-listings">
+          <!-- 
+          <div class="col-6 col-md-4">
+            <div class="card">
+              <div class="p-2">
+                <h5>Job Title</h5>
+                <p>Location</p>
+                <p class="border-bottom border-dark">Type | Salary</p>
+
+                <div class="row">
+                  <div class="col-12 col-md-3 p-2">
+                    <h6 class="border-bottom border-dark bg-primary">Qualifications/Educational Requirements</h6>
+                    <p>The Qualifications</p>
+                  </div>
+
+                  <div class="col-12 col-md-3">
+                    <h6 class="border-bottom border-dark bg-primary">Roles and Responsibilities</h6>
+                    <p>roles and resp</p>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-4">
+                  <h6>Apply Now!</h6>
+                  <p>email</p>
+                </div>
+
+              </div>
+              <div>
+                <button class="btn btn-outline-warning">Delete Post</button>
+              </div>
+            </div>
+          </div> -->
+
+        </section>
+
+
+
+
 
       </section>
     </div>
