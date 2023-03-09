@@ -1,4 +1,12 @@
-import { carsService } from "./CarsService.js";
+import { appState } from "../AppState.js"
+import { saveState } from "../Utils/Store.js"
+
+
+
+
+function _saveJobs() {
+  saveState('cars', appState.jobs)
+}
 
 
 
